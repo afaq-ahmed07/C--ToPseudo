@@ -116,7 +116,7 @@ model = load_model("model.pth", src_vocab_size, tgt_vocab_size, device)
 # User input for code
 code_input = st.text_area("Enter code:", "")
 
-if st.button("Generate C++ Code"):
+if st.button("Generate Pseudo Code"):
     if code_input:
         generated_pc = generate_pseudocode(model, code_input, src_vocab, tgt_vocab, max_length=100, device=device)
         st.subheader("Generated Pseudo Code:")
